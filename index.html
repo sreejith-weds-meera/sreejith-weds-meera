@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sreejith & Merin — Wedding Invitation</title>
+  <meta name="description" content="Online wedding invitation for Sreejith and Merin">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;700&family=Great+Vibes&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="landing-page">
+  <div class="page-loader">
+    <div class="loader-overlay"></div>
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <p>Loading invitation...</p>
+    </div>
+  </div>
+  <div class="page-cover"></div>
+  <main class="landing-hero">
+    <div class="landing-panel">
+      <p class="hero-label">Wedding Invitation</p>
+      <h1 class="hero-name">Sreejith <span>&amp;</span> Meeera</h1>
+      <p class="hero-date">July 11, 2026</p>
+      <p class="hero-text">Please join us for a day of love, family, and celebration as we begin our forever.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="invitation.html" id="openInvitationBtn">Open Invitation</a>
+        <button class="btn btn-outline" id="saveCalendarBtn">Save Google Calendar</button>
+      </div>
+      <!-- <p class="hero-note">Click the music icon to play the welcome song.</p> -->
+    </div>
+  </main>
+
+  <!-- <div class="music-control">
+    <button id="musicToggle" class="music-btn" title="Play Music"><i class="fas fa-music"></i></button>
+  </div> -->
+
+  <audio id="bgMusic" loop autoplay playsinline muted>
+    <source src="https://ulems.my.id/assets/music/pure-love-304010.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

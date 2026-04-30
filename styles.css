@@ -18,6 +18,13 @@ body {
   position: relative;
 }
 
+.invitation-page {
+  background-image: url('images/us_bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 body::before {
   content: '';
   position: fixed;
@@ -852,6 +859,12 @@ button,
   }
 
   .landing-hero {
+    background-position: top center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .invitation-page {
     background-position: top center;
     background-size: cover;
     background-attachment: scroll;

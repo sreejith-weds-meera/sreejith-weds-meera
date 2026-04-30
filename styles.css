@@ -850,4 +850,10 @@ button,
     flex: 0 0 180px;
     min-height: 180px;
   }
+
+  .landing-hero {
+    background-position: top center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
 }

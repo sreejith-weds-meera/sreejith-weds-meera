@@ -19,7 +19,6 @@ body {
 }
 
 .invitation-page {
-  background-image: url('images/us_bg.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -568,11 +567,21 @@ button,
 
 .gallery-item {
   flex: 0 0 250px;
-  min-height: 250px;
+  aspect-ratio: 1 / 1; /* reserve a square box to avoid layout shifts */
+  min-height: auto; /* height handled by aspect-ratio */
   border-radius: 20px;
+  background-color: #f6f3ef; /* neutral placeholder while image loads */
   background-size: cover;
   background-position: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.25s ease, opacity 0.25s ease;
+  will-change: transform, filter, opacity; /* rendering hint for smoother swaps */
+  overflow: hidden;
+}
+
+.gallery-item.loading {
+  /* apply a subtle blur/saturation while the high-res image is loading */
+  filter: blur(6px) saturate(0.95);
+  opacity: 0.98;
 }
 
 .gallery-item:hover {

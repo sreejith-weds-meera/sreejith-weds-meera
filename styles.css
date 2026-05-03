@@ -18,11 +18,11 @@ body {
   position: relative;
 }
 
-/* .invitation-page {
-  /* background-size: cover;
+.invitation-page {
+  background-size: cover;
   background-position: center;
-  background-attachment: fixed; */
-} */
+  background-attachment: fixed;
+}
 
 body::before {
   content: '';
@@ -56,7 +56,7 @@ body::before {
 .loader-overlay {
   position: absolute;
   inset: 0;
-  background: url('images/us_bg.jpeg') center/cover no-repeat;
+  background: url('images/bg.png') center/cover no-repeat;
   opacity: 0.22;
   filter: blur(2px);
 }
@@ -221,7 +221,7 @@ button,
   align-items: center;
   justify-content: center;
   padding: 40px 24px;
-  background-image: url('images/us_bg.jpeg');
+  background-image: url('images/bg.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

@@ -1,0 +1,12 @@
+{
+  "name": "sreejith-weds-meera-utils",
+  "version": "1.0.0",
+  "description": "Utility scripts for the wedding site",
+  "main": "resize-og.js",
+  "scripts": {
+    "resize-og": "node resize-og.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.0"
+  }
+}

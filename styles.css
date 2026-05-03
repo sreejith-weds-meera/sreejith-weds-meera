@@ -18,11 +18,11 @@ body {
   position: relative;
 }
 
-.invitation-page {
+/* .invitation-page {
   /* background-size: cover;
   background-position: center;
   background-attachment: fixed; */
-}
+} */
 
 body::before {
   content: '';

@@ -18,11 +18,11 @@ body {
   position: relative;
 }
 
-.invitation-page {
+/* .invitation-page {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
+} */
 
 body::before {
   content: '';
@@ -221,7 +221,7 @@ button,
   align-items: center;
   justify-content: center;
   padding: 40px 24px;
-  background-image: url('images/bg.jpeg');
+  background-image: url('images/bg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

@@ -19,9 +19,9 @@ body {
 }
 
 .invitation-page {
-  background-size: cover;
+  /* background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 body::before {
@@ -582,6 +582,13 @@ button,
   /* apply a subtle blur/saturation while the high-res image is loading */
   filter: blur(6px) saturate(0.95);
   opacity: 0.98;
+}
+
+.gallery-item.loaded {
+  /* when fully loaded, remove blur and ensure crisp image */
+  filter: none;
+  opacity: 1;
+  transition: filter 0.35s ease, opacity 0.35s ease, transform 0.3s ease;
 }
 
 .gallery-item:hover {

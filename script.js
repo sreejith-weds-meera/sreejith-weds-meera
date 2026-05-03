@@ -536,3 +536,48 @@ window.addEventListener('scroll', () => {
 });
 
 console.log('Wedding website initialized! 💕');
+
+// ==================== GALLERY IMAGE PRELOADER (RESERVE SPACE + SMOOTH SWAP) ====================
+function initGalleryPreloader() {
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  if (!galleryItems || galleryItems.length === 0) return;
+
+  galleryItems.forEach(item => {
+    // mark as loading so CSS shows placeholder/blur
+    item.classList.add('loading');
+
+    // extract URL from inline style background-image or data-src
+    const bgStyle = item.getAttribute('style') || '';
+    const dataSrc = item.dataset.src;
+    let urlMatch = bgStyle.match(/url\(["']?(.*?)["']?\)/i);
+    const src = dataSrc || (urlMatch ? urlMatch[1] : null);
+    if (!src) {
+      // nothing to load
+      item.classList.remove('loading');
+      item.classList.add('loaded');
+      return;
+    }
+
+    // create an Image to preload
+    const img = new Image();
+    img.src = src;
+    img.onload = () => {
+      // ensure the same background-image is set (usefull if data-src used)
+      item.style.backgroundImage = `url('${src}')`;
+      // toggle classes for smooth transition
+      item.classList.remove('loading');
+      item.classList.add('loaded');
+    };
+    img.onerror = () => {
+      // on error, remove loading state but keep placeholder
+      item.classList.remove('loading');
+    };
+  });
+}
+
+// Run after DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGalleryPreloader);
+} else {
+  initGalleryPreloader();
+}
